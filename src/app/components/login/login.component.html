@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div fxLayout="column wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" fxFlex="30" style="background-color: black;" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" fxFlex="80" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <mat-card style="margin-left: 365px;height: 330px;">
+                  <div class="outer-dev-flex">
+                      <h1 style="font-size: 30px;font-weight: 600;" class="login-header">EMS LOGIN</h1>
+                  </div>
+                          <form [formGroup]="employeeLoginForm" >
+                              <div>
+                              <div class="input-lable">Email<span class="color-red"> *</span></div>
+                              </div>
+                              <mat-form-field [appearance]="'outline'" [floatLabel]="'auto'" style="width: 350px;">
+                                  <input matInput placeholder="Please enter email" type="email" maxlength="50" formControlName="email" autocomplete="off">
+                                  <!-- <mat-error align="start" *ngIf="employeeLoginForm.controls['email'].hasError('required')">Please enter the email</mat-error> -->
+                                  <!-- <mat-error align="start" *ngIf="!employeeLoginForm.controls['email'].hasError('required') && employeeLoginForm.controls['email'].errors">Please enter a valid input</mat-error> -->
+                                </mat-form-field>
+                                <div>
+                                  <div class="input-lable">Password<span class="color-red"> *</span></div>
+                                  </div>
+                                  <mat-form-field [appearance]="'outline'" [floatLabel]="'auto'">
+                                      <input matInput placeholder="Please enter password" *ngIf="showPassword" type="username" formControlName="password" autocomplete="off">
+                                      <mat-icon matSuffix class="pointer" (click)="passwordToggle()" *ngIf="showPassword">visibility</mat-icon>
+                                      <input matInput placeholder="Please enter password" *ngIf="!showPassword" type="password" formControlName="password" autocomplete="off" >
+                                      <mat-icon matSuffix class="pointer" (click)="passwordToggle()" *ngIf="!showPassword">visibility_off</mat-icon>
+                                    </mat-form-field>
+                                    <div class="outer-dev-flex padding-5-0">
+                                      <!-- <div class="inner-dev-flex">
+                                          <button mat-raised-button class="secondary-button" (click)="cancel()">Cancel</button>
+                                      </div> -->
+                                      <div style="width: 100%;">
+                                          <button mat-raised-button class="primary-button signin-btn" (click)="signIn()">Sign in</button>
+                                      </div>
+                                    </div>
+                          </form>
+              </mat-card>
+          </div>
+      </div>
+      <!-- <div fxLayout="row wrap" fxFlex="70" style="background-color: #ffff;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <img style="width: 50%;" src="./assets/login.svg">
+      </div> -->
+  </div>
+  </div>

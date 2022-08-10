@@ -1,1 +1,81 @@
-<p>home works!</p>
+<!-- <div fxLayout="row " class="padding-10 no-display" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false" id="one-platform-toaster-div">
+  <div fxLayout="column wrap" style="width:30px" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <mat-icon id="one-platform-toaster-icon">checkcircle</mat-icon>
+  </div>
+  <div fxLayout="column wrap" style="min-width:240px;margin-left:10px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><label id="one-platform-toaster-text" class="bold-label font-12">
+    </label></div>
+  <div fxLayout="column wrap" style="width:30px;margin-left:10px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <mat-icon class="pointer">close</mat-icon>
+  </div>
+</div> -->
+
+<div fxLayout="column wrap" style="height:100%;width:100%;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="column wrap" class="side-bar" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" style="height: 100px;" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+        <!-- <div>
+          <img src="/src/app/assets/home-icon.png">
+        </div> -->
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <div><mat-icon>bubble_chart</mat-icon></div>
+          <!-- <img src="./assets/Logo.png" alt="LOGO"> -->
+          <div style="font-size: 25px;font-weight: 600;"><span>EMS Tool</span></div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" style="min-height:50px" class="padding-10-20 pointer" fxLayoutAlign="start start" [fxShow]="true" [fxHide]="false" *ngFor="let M of staticData.menus;">
+        <div fxLayout="column wrap" fxFlex="100" fxLayoutGap="20" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" (click)="menuClicked(M)">
+          <div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" [ngClass]="!router.url.includes(M.route)?'gray-font':''">
+            <div fxLayout="column wrap" style="width:20px" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+              <mat-icon class="icon-18">{{M.icon}}</mat-icon>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false">
+              <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false"><span class="font-16 font-weight-500">
+                {{M.desc}}</span></div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column wrap" style="padding-top:10px;" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" *ngIf="M.active">
+          <div fxLayout="row wrap" style="min-height:30px" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false" *ngFor="let sub of M.submenus;" (click)="subMenuClicked(sub)" [ngClass]=" sub.disable?'disable-background gray-font':(router.url.includes(sub.route)?'active-submenu':'gray-font')"><span [ngClass]="sub.disable?'':'font-weight-500'" style="margin-left:50px;" class="font-13">
+            {{sub.desc}}</span></div>
+        </div>
+      </div>
+      <!-- <div class="bold-label version-div font-10">
+        V{{backend.version}}-{{backend.env}}</div> -->
+    </div>
+    <div fxLayout="column wrap" class="main-div" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div fxLayout="row wrap" class="width-100 toolbar-row" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false">
+        <!-- <div fxLayout="column wrap" class="input-control search-box" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false" fxHide.lt-md="true">
+          <mat-form-field style="width:471px;margin-top:10px;" [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput name="main-search" placeholder="Search" [required]="false" autocomplete="off">
+            <mat-icon matPrefix>search</mat-icon>
+          </mat-form-field>
+        </div> -->
+        <div fxLayout="column wrap" style="flex-grow: 1;" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="row wrap" fxLayoutGap="40px" style="margin-right: 50px;" fxLayoutAlign="end center" [fxShow]="true" [fxHide]="false">
+            <div fxLayout="column wrap" class="pointer" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <div>
+                <span class="material-icons header-icons">notifications_none</span>
+              </div><span class="header-text">
+                Notifications</span>
+            </div>
+            <div fxLayout="column wrap" class="pointer" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+              <div>
+                <span class="material-icons header-icons">account_circle</span>
+              </div>
+              <!-- <span class="header-text">{{ userInfo &amp;&amp; userInfo.displayName || &apos;User&apos;}}</span> -->
+            </div>
+            <!-- <div fxLayout="column wrap" class="pointer" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" (click)="logout()">
+              <div>
+                <span class="material-icons header-icons">logout</span>
+              </div><span class="header-text">
+                Logout</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" class="router-row" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

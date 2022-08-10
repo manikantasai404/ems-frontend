@@ -1,4 +1,231 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat",sans-serif;
+  background: #edeff3 !important;
+}
+
+app-login {
+  height: 100%;
+  width: 100%;
+}
+
+.no-display {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  opacity: 0 !important;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.bold-label {
+  font-weight: 600;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.outer-dev-flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-dev-flex {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.padding-5-0 {
+  padding: 5px 0px;
+}
+
+.color-red {
+  color: red;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.input-lable {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a7381;
+}
+
+.primary-button {
+  background: black;
+  color: white;
+  width: 100%;
+}
+
+.signin-btn :hover {
+  background: #ffffff;
+  color:black;
+  width: 100%;
+}
+
+.secondary-button {
+  background: #f590b7;
+  color: white;
+  width: 110px;
+}
+
+.login-header {
+  color: black ;
+}
+
+.successSnackbar {
+  background-color: #23ff56;
+  color: rgb(7, 36, 19);
+}
+
+.errorSnackbar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.bold-label {
+  font-weight: 600;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-13 {
+  font-size: 13px;
+}
+
+.side-bar {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  color: #202121;
+  background: #ffffff;
+  box-shadow: inset -1px 0px 0px #e4e5e7;
+}
+
+.logo-holder {
+  width: 168px;
+  height: 41px;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.padding-10-20 {
+  padding: 10px 20px;
+}
+
+.icon-18 {
+  font-size: 18px;
+  height: 18px !important;
+  width: 18px !important;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.main-div {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+}
+
+.light-bg {
+  background: #f9fbfd;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.toolbar-row {
+  height: 60px;
+  /* border-bottom: 1px solid #e4e8ee; */
+  position: fixed;
+  padding-left: 16px;
+  padding-right: 270px;
+  top: 0;
+  z-index: 1000;
+}
+
+.search-box .mat-form-field-outline {
+  background: white;
+}
+
+.search-box .mat-form-field-wrapper {
+  padding-bottom: 0px;
+}
+
+.search-box .mat-icon {
+  color: #657285;
+}
+
+.search-box input {
+  font-size: 12px;
+}
+
+.header-icons {
+  font-size: 22px;
+  color: #6a7381;
+}
+
+.header-text {
+  font-weight: 600;
+  font-size: 10px;
+  color: #6a7381;
+}
+
+.router-row {
+  margin-top: 60px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.white-bg {
+  background-color: #ffffff;
+}
+
+.margin-top-70 {
+    margin-top: 70px;
+}
+
+.under-cunstruction {
+    font-size: unset !important;
+    color: black;
+    font-weight: revert !important;
+}
+
